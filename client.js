@@ -60,7 +60,7 @@
     if (host === '') return;
     var cssToLoad = 'main.css';
 	
-	if (host.includes('zillow')) {
+	if (host.includes('zillow') || (host.includes('google.com/maps') || global.self.location.pathname.includes('maps'))) {
         cssToLoad = '';
     }
     else if (host.includes('facebook')) {
@@ -68,7 +68,7 @@
     }
     else if (host.includes('stackoverflow') || host.includes('serverfault.com') || host.includes('superuser.com')
         || host.includes('stackapps.com') || host.includes('mathoverflow.net') || host.includes('askubuntu.com') 
-        || host.match("^https?:\\/\\/((?!(www|area51|gaming)).*\\.)?stackexchange.com.*")) {
+        || host.includes('stackexchange.com')) {// host.match("^https?:\\/\\/((?!(www|area51|gaming)).*\\.)?stackexchange.com.*")) {
         cssToLoad = 'stackexchange.css';
     }
     else if (host.includes('youtube')) {

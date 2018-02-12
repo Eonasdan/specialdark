@@ -14,7 +14,7 @@ background-origin: padding-box !important;
 
 /* custom code font */
 pre.prettyprint {
-font-family: "/*[[font-choice]]*/", Monaco, Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+font-family: Monaco, Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
 }
 
 /* === custom color === */
@@ -84,7 +84,7 @@ background-color: #000 !important;
 background-color: rgba(0,0,0,0.4) !important;
 }
 
-header {
+header, #job-detail .job-detail-body .main .job-detail-content .-sticky-tabs {
 background-color: #080808 !important;
 }
 
@@ -159,7 +159,7 @@ color: #ddd !important;
 
 #header #topbar, .revision-comment, .date-span, .post-tag, .form-submit input, .preferred-login,
 .mdhelp, .wmd-help-button.active-help, .date_brick, .more-info, .review-stats-current-user,
-.review-stats-count-current-user, .topbar-menu-links {
+.review-stats-count-current-user, .topbar-menu-links, #job-detail a {
 background: #222 !important;
 color: #ddd !important;
 -webkit-border-radius: 3px !important;
@@ -648,3 +648,7 @@ color: #ccc !important;
 .atn { color: #088 !important; } /* attribute */
 .atv { color: #0a0 !important; } /* attribute value*/
 .dec { color: #90a !important; } /* doc type */
+
+#job-detail {
+	background-color: transparent !important;
+}
