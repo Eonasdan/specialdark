@@ -1,0 +1,48 @@
+body * {
+    border-color: transparent !important;
+    color: #ccc !important;
+    background-color: transparent !important;
+}
+
+.ember-view,
+.share-box__wrapper,
+.share-box__article-cta,
+.share-content-type-drawer__content,
+.see-more,
+.right-rail-container,
+.feed-shared-control-menu-content,
+.feed-shared-first-prompt-block,
+.feed-shared-article--e2e,
+.feed-shared-interest-package__section-header,
+.feed-shared-mini-update-v2,
+.comments-comments-list,
+.feed-shared-post-meta__profile-link,
+.comments-highlighted-comment-item-content-body,
+.comments-reply-item-content-body,
+.comments-comment-box__camera-icon,
+.comments-comment-texteditor,
+.mentions-texteditor__content,
+.artdeco-button--muted,
+.msg-form--thread .msg-form--thread,
+.large-header, .large-text, .medium-text, .small-text, body, h1, h2, h3, h4, h5, p,
+.msg-messaging-container__core-rail,
+.msg-s-message-list__top-banner,
+.msg-title-bar__title-bar-title,
+.msg-overlay-bubble-header,
+.msg-overlay-list-bubble__content,
+.msg-overlay-list-bubble-search__input-container,
+.msg-overlay-list-bubble-search__search-typeahead-input,
+.msg-form__footer,
+.msg-overlay-list-bubble__convo-item--hoverable:hover,
+.extended-nav
+ {
+    background-repeat: repeat !important;
+    background-color: #181818 !important;
+}
+
+
+.t-black--light, .t-black, #share-warning-modal__header, ::placeholder { color: #ccc !important;}
+
+.job-card--tile, .Elevation-0dp, .Elevation-2dp {
+    box-shadow: 0 0 0 1px #555;
+}

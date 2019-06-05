@@ -1,10 +1,8 @@
-# Special Dark
+# Special Dark Theme
 
-**_Darkens bright pages for easier nighttime reading. Check it out on the [Chrome Web Store](https://chrome.google.com/webstore/detail/dark-theme-everywhere/nibjplbnmmklkfnkpecgbffkifmdbjed)._**
+**_Darkens bright pages. Love your eyes and your power bill. Check it out on the [Chrome Web Store](https://chrome.google.com/webstore/detail/dark-theme-everywhere/nibjplbnmmklkfnkpecgbffkifmdbjed)._**
 
-Unofficial improvement of [Dark Theme Everywhere](https://chrome.google.com/webstore/detail/dark-theme-everywhere/nibjplbnmmklkfnkpecgbffkifmdbjed).
-
-## Improvements from _Dark Theme Everywhere]_:
+## Features_:
  - Ignores Code/Pre tags
  - Includes a few special site specific styles such as:
    - Facebook

@@ -77,14 +77,14 @@
     else if (host.includes('github')) {
         cssToLoad = 'github.css';
     }
-    else if (host.includes('inbox.google.com')) {
-        cssToLoad = 'inbox.css';
-    }
     else if (host.includes('amazon')) {
         cssToLoad = 'amazon.css';
     }
 	else if (host.includes('twitter.com')) {
 		cssToLoad = 'twitter.css';
+	}
+	else if (host.includes('linkedin.com')) {
+		cssToLoad = 'linkedin.css';
 	}
 
 	if (cssToLoad !== '') {
