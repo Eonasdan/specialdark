@@ -14,7 +14,7 @@
   // expose it to background.js through listeners, and trust background.js as
   // the dispatcher.
   function toggle() {
-    var dark = document.getElementById("special-dark");
+    var dark = document.getElementById('special-dark');
     if (dark) dark.disabled = isDark;
     isDark = !isDark;
   }
@@ -28,12 +28,12 @@
     }
 
     switch (request.type) {
-      case "com.eonasdan.dte__REMOVE_MEDIA_FILTERS":
-        html.classList.add("dark-theme-everywhere-filters-off");
+      case 'com.eonasdan.dte__REMOVE_MEDIA_FILTERS':
+        html.classList.add('dark-theme-everywhere-filters-off');
         break;
-      case "com.eonasdan.dte__TOGGLE":
+      case 'com.eonasdan.dte__TOGGLE':
         toggle();
-        if (typeof response === "function") {
+        if (typeof response === 'function') {
           response({ isDark: isDark, url: global.location.hostname });
         }
         break;
@@ -41,7 +41,7 @@
   });
 
   // Let the background script know that we've loaded new content.
-  chrome.runtime.sendMessage({ type: "com.eonasdan.dte__READY" });
+  chrome.runtime.sendMessage({ type: 'com.eonasdan.dte__READY' });
 
   // HACK(riley): To gain an advantage in the specificity wars (against RES,
   //              for example), add an ID to the <html> or <body> element if
@@ -59,51 +59,51 @@
   //              - Toggling inline styles is a huge pain right now, and though
   //                it might be the right idea some day it's far beyond the
   //                scope of this project.
-  var specificityHelper = "dark-theme-everywhere-specificity-helper";
+  var specificityHelper = 'dark-theme-everywhere-specificity-helper';
   html.classList.add(specificityHelper);
 
   var host = global.self.location.host;
-  if (host === "") return;
-  var cssToLoad = "main.css";
+  if (host === '') return;
+  var cssToLoad = 'main.css';
 
   if (
-    host.includes("zillow") ||
-    (host.includes("google.com/maps") ||
-      global.self.location.pathname.includes("maps"))
+    host.includes('zillow') ||
+    (host.includes('google.com/maps') ||
+      global.self.location.pathname.includes('maps'))
   ) {
-    cssToLoad = "";
-  } else if (host.includes("facebook")) {
-    cssToLoad = "facebook.css";
+    cssToLoad = '';
+  } else if (host.includes('facebook')) {
+    cssToLoad = 'facebook.css';
   } else if (
-    host.includes("stackoverflow") ||
-    host.includes("serverfault.com") ||
-    host.includes("superuser.com") ||
-    host.includes("stackapps.com") ||
-    host.includes("mathoverflow.net") ||
-    host.includes("askubuntu.com") ||
-    host.includes("stackexchange.com")
+    host.includes('stackoverflow') ||
+    host.includes('serverfault.com') ||
+    host.includes('superuser.com') ||
+    host.includes('stackapps.com') ||
+    host.includes('mathoverflow.net') ||
+    host.includes('askubuntu.com') ||
+    host.includes('stackexchange.com')
   ) {
     // host.match("^https?:\\/\\/((?!(www|area51|gaming)).*\\.)?stackexchange.com.*")) {
-    cssToLoad = "stackexchange.css";
-  } else if (host.includes("github")) {
-    cssToLoad = "github.css";
-  } else if (host.includes("amazon")) {
-    cssToLoad = "amazon.css";
-  } else if (host.includes("twitter.com")) {
-    cssToLoad = "twitter.css";
-  } else if (host.includes("linkedin.com")) {
-    cssToLoad = "linkedin.css";
+    cssToLoad = 'stackexchange.css';
+  } else if (host.includes('github')) {
+    cssToLoad = 'github.css';
+  } else if (host.includes('amazon')) {
+    cssToLoad = 'amazon.css';
+  } else if (host.includes('twitter.com')) {
+    cssToLoad = 'twitter.css';
+  } else if (host.includes('linkedin.com')) {
+    cssToLoad = 'linkedin.css';
   }
 
-  if (cssToLoad !== "") {
-    document.addEventListener("DOMContentLoaded", function() {
-      var t = document.createElement("link");
-      t.href = chrome.extension.getURL("styles/" + cssToLoad);
-      t.id = "special-dark";
-      t.type = "text/css";
-      t.rel = "stylesheet";
+  if (cssToLoad !== '') {
+    document.addEventListener('DOMContentLoaded', function() {
+      var t = document.createElement('link');
+      t.href = chrome.extension.getURL('styles/' + cssToLoad);
+      t.id = 'special-dark';
+      t.type = 'text/css';
+      t.rel = 'stylesheet';
       t.disabled = !isDark; //sometimes toggle happens before we get here (excluded site)
-      document.getElementsByTagName("head")[0].appendChild(t);
+      document.getElementsByTagName('head')[0].appendChild(t);
 
       var body = document.body;
       body.classList.add(specificityHelper);
